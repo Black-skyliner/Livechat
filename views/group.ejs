@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live chat | RG</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <div class="fadeIn first">
+                    <img src="../images/group.png" id="icon" alt="User Icon" />
+                </div>
+                <h5 class="mt-4"> Créer un groupe </h5>
+                <form action="/group/create" method="POST">
+                    <div class="row">   
+                        <div class="col-md-12">
+                            <input type="text" id="name" class="fadeIn second" name="name" placeholder="Nom du groupe" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="mt-3">Inviter des personne dans la liste.</label>
+                            <div id="users" class="customized-userList">
+                                <ul class="list-group list-group-flush"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <input id="page" type="hidden" value="newGroup">
+                    <input id="token" type="hidden" value="<%= token %>"/>
+                    <input type="submit" class="fadeIn fourth" value="Créer">
+                </form>
+    
+                <div id="formFooter">
+                    <a class="underlineHover" href="/chat">Retourner au chat</a>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="../js/chat.js"></script>
+</body>
+
+</html>

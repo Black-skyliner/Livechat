@@ -1,0 +1,128 @@
+.container{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+
+    @mixin container {
+        height: 300px;
+        background: #f7f7f7;
+        overflow-y: auto;
+        margin: 15px 0px;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+    fieldset{
+        border: 1px solid #ccc;
+        min-height: 220px;
+        padding: 5px;
+        padding-bottom: 50px;
+        
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        padding: 30px;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+
+        legend{
+            padding: 0px 0px 0px 15px;
+            width: 355px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            background-color: #ffffff;
+        }
+
+        form {
+            .btn-send {
+                background-color: #C7A932;
+                border-color: #C7A932;
+                color: #ffffff;
+            }
+
+            .btn-send:hover{
+                background-color: #9e810f;
+                border-color: #9e810f;
+            }
+        }
+
+        #room {
+            @include container;
+
+            > p {
+                display: table;
+                background: #ffe5ca;
+                padding: 5px;
+                border-radius: 0px 15px 15px 0px;
+                font-size: 14px;
+                margin: 5px 0px 5px 0px;
+
+                &.-right{
+                    margin-left: auto;
+                    margin-right: 0;
+                    border-radius: 15px 0px 0px 15px;
+                    padding-left: 10px;
+                    background-color: #ffe8b1;
+                    text-align: right;
+                }
+            }
+        }
+
+        .message{
+            margin: 0px;
+        }
+
+        .username {
+            color: #a58b04;
+            font-size: 12px;
+        }
+
+    }
+
+    #users{
+        @include container;
+        background: #ffffff;
+        height: 200px;
+    }
+
+    #groups{
+        @include container;
+        background: #ffffff;
+        height: 200px;
+    }
+
+    .customized-userList{
+        height: 150px !important;
+        margin: 5px 10px 15px 15px !important;
+    }
+    
+    .nav-tabs > li {
+        position:relative;    
+    }
+    
+    .nav-tabs > li > a {
+        display:inline-block;
+    }
+    
+    .nav-tabs > li > span {
+        display:none;
+        cursor:pointer;
+        position:absolute;
+        right: 6px;
+        top: 8px;
+        color: red;
+    }
+    
+    .nav-tabs > li:hover > span {
+        display: inline-block;
+    }
+}
+
+.overlay {
+    background: #e9e9e9;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}

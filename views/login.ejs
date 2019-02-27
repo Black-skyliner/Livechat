@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live chat | RG</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div class="alert alert-secondary alert-customized">
+                Vous pouvez utiliser le même identifiant et mots de passe de votre compte RG.
+            </div>
+            <div class="fadeIn first">
+                <img src="images/conversation.png" id="icon" alt="User Icon" />
+            </div>
+            <h5 class="mt-4"> Connectez-vous à la messagerie instantanée : "les rencontres des chefs" </h5>
+            <form action="/chat" method="POST">
+                <input type="email" id="email" class="fadeIn second" name="email" placeholder="Adresse email" required>
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Mot de passe" required>
+                <input type="submit" class="fadeIn fourth" value="Se connecter">
+            </form>
+
+            <div id="formFooter">
+                <a class="underlineHover" href="http://lesrencontresgastronomiques.com">Retourner au site</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
